@@ -20,7 +20,8 @@
         "scripting"
     ],
     "host_permissions": [
-        "https://misskey.io/*"
+        "https://misskey.io/*",
+        "https://media.misskeyusercontent.jp/io/*"
     ],
     "content_scripts": [
         {
