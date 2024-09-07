@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "author": "yuutarou KAMENASHI",
+    "homepage_url": "https://github.com/ykamenashi/chrome-ex-misskey-download-zipped-images",
+    "name": "Misskey download zipped images",
+    "description": "Download author-named zip files from Misskey",
+    "version": "1.0",
+    "icons": {
+    },
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "action": {
+        "default_icon": "img/d-icon.png",
+        "default_title": "Misskey download zipped images"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://misskey.io/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://misskey.io/*"],
+            "js": ["lib/jszip.js"]
+        }
+    ]
+}
