@@ -8,8 +8,7 @@
     "icons": {
     },
     "background": {
-      "service_worker": "background.js",
-      "type": "module"
+      "service_worker": "background.js"
     },
     "action": {
         "default_icon": "img/d-icon.png",
@@ -26,7 +25,10 @@
     "content_scripts": [
         {
             "matches": ["https://misskey.io/*"],
-            "js": ["lib/jszip.js"]
+            "js": [
+                "lib/jszip.js",
+                "content-script.js"
+            ]
         }
     ]
 }
