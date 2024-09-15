@@ -14,6 +14,7 @@ chrome.runtime.onMessage.addListener(
     async (req, opt) => {
         if (req.name === 'resImgUrls') {
             //console.log(`resImgUrls is working. ${req.data}`);
+            const mode = req.from;
             let blobArray = [];
             const reader = new FileReader();
             reader.onload = () => {
@@ -32,7 +33,8 @@ chrome.runtime.onMessage.addListener(
                     tabs[0].id,
                     {
                         name: "resBlobArray",
-                        data: blobArray
+                        data: blobArray,
+                        from: mode
                     }
                 );
             });

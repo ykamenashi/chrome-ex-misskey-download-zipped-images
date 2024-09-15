@@ -15,8 +15,7 @@
         "default_title": "Misskey download zipped images"
     },
     "permissions": [
-        "activeTab",
-        "scripting"
+        "activeTab"
     ],
     "host_permissions": [
         "https://misskey.io/*",
