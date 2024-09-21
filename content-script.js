@@ -79,6 +79,7 @@ const timer = setInterval(watchDOM, 500);
 
 function watchDOM() {
     const windowElm = document.querySelectorAll('._shadow')[document.querySelectorAll('._shadow').length-1];
+    if(!windowElm) return; // 要素が無い場合、終了
     if(windowElm.querySelectorAll('div.image a').length == 0) return; // ウインドウが無い場合、終了
     const toolbar = windowElm.querySelector('footer').firstChild; // footer DateTime link
     if( toolbar.childElementCount > 1 ) return; // ボタン埋め込み済の場合、終了
